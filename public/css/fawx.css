@@ -1,0 +1,22 @@
+/*
+ * Some modifications to lanyon for fawx.com
+ */
+
+ .masthead-title a {
+  background-image: url('/public/logo.png');
+  background-repeat: no-repeat;
+  padding: 12px 0 12px 40px;
+}
+
+.contact-icons a {
+  text-decoration: none;
+}
+
+.contact-icons svg path {
+	fill: #257eaa;
+}
+
+.contact-icons svg:hover {
+	stroke: #fff;
+	stroke-width: 10px;
+}
