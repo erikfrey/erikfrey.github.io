@@ -20,3 +20,8 @@
 	stroke: #fff;
 	stroke-width: 10px;
 }
+
+.post img {
+	margin-left: auto;
+    margin-right: auto;
+}
