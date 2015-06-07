@@ -16,7 +16,7 @@ tagline:             'by Erik Frey'
 description:         "Personal website of Erik Frey.  Established 2003, frequently neglected, here to stay."
 url:                 http://fawx.com
 baseurl:             /
-paginate:            5
+paginate:            2
 
 # About/contact
 author:
