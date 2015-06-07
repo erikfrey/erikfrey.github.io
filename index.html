@@ -15,6 +15,26 @@ title: Home
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.content }}
+
+    {% if post.flickrtag %}
+    <ul id="flickr-tag-{{ post.flickrtag }}" class="thumbs"></ul>
+    <script>
+    $(document).ready(function(){
+      $('#flickr-tag-{{ post.flickrtag }}').jflickrfeed({
+        limit: 14,
+        qstrings: {
+          id: '36812217@N07',
+          tags: '{{ post.flickrtag }}'
+        },
+        itemTemplate: '<li><a rel="colorbox" href="{{ "{{image" }}}}" ' +
+        'title="{{ "{{title" }}}}"><img src="{{ "{{image_s" }}}}" ' +
+        'alt="{{ "{{title" }}}}" /></a></li>'
+        }, function(data) {
+          $('#flickr-tag-{{ post.flickrtag }} a').colorbox();
+        });
+    });
+    </script>
+    {% endif %}
   </div>
   {% endfor %}
 </div>
