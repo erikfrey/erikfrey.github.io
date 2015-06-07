@@ -17,10 +17,10 @@ title: Home
     {{ post.content }}
 
     {% if post.flickrtag %}
-    <ul id="flickr-tag-{{ post.flickrtag }}" class="thumbs"></ul>
+    <ul id="flickr-feed{{ post.id | replace:'/','-' }}" class="thumbs"></ul>
     <script>
     $(document).ready(function(){
-      $('#flickr-tag-{{ post.flickrtag }}').jflickrfeed({
+      $('#flickr-feed{{ post.id | replace:'/','-' }}').jflickrfeed({
         limit: 21,
         qstrings: {
           id: '36812217@N07',
@@ -30,7 +30,7 @@ title: Home
         'title="{{ "{{title" }}}}"><img src="{{ "{{image_s" }}}}" ' +
         'alt="{{ "{{title" }}}}" /></a></li>'
         }, function(data) {
-          $('#flickr-tag-{{ post.flickrtag }} a').colorbox();
+          $('#flickr-feed{{ post.id | replace:'/','-' }} a').colorbox();
         });
     });
     </script>
